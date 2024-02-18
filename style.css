@@ -53,8 +53,9 @@
     border-radius: 8px;
     padding: 10px 22px;
     font-weight: 500;
-   
+    margin: 8px 0px;
 }
+
 .border-bottom{
     border-bottom: 1px dashed #03071233;
 }
@@ -65,6 +66,7 @@
     height: 50px;
     text-align: center;
     border-radius: 5px;
+    margin: 0px 8px;
 }
 
 .steering-while{
@@ -110,6 +112,17 @@ form input::placeholder{
     margin: 10px 0px;
 }
 
+@media screen and (max-width: 900px){
+
+    .total-seat {
+        flex-wrap: wrap;
+    }
+
+    .total-seat>div{
+        width: 100%;
+        margin: 10px 0px;
+    }
+}
 
 
 @media screen and (max-width: 450px){
@@ -132,6 +145,10 @@ form input::placeholder{
         font-size: 16px;
     }
 
+
+
+
+
     .cupon-text h1{
         font-size: 25px;
     }
@@ -144,5 +161,27 @@ form input::placeholder{
     .cupon-div2{
         width: 55% !important;
     }
+
+
+
+
+    .ticket-div-main{
+        flex-wrap: wrap !important;
+    }
     
+    .devider{
+        display: none !important;
+    }
+
+    .ticket-div1{
+        width: 100% !important;
+    }
+
+    .ticket-div2{
+        width: 100% !important;
+    }
+
+    .three-btn button{
+        width: 100%;
+    }
 }

@@ -104,26 +104,31 @@
         </section>
  
 
-        <section class="bg-[#F7F8F8] rounded-tl-[100px] rounded-tr-[100px] hidden" style="border-top: 2px solid #1DD100;">
-            <div class="max-w-[1200px] m-auto px-5 pt-20 pb-20">
+        <section class="bg-[#F7F8F8] rounded-tl-[100px] rounded-tr-[100px]" style="border-top: 2px solid #1DD100;">
+            <div class="max-w-[1240px] m-auto px-10 pt-20 pb-20">
+                <!---->
                 <div class="text-center">
                     <h1 class="text-4xl text-black font-bold">P.H Paribhan</h1>
                     <p class="max-w-[800px] m-auto text-base my-10">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis excepturi dolorem accusamus pariatur! Nemo expedita, corrupti voluptatem ducimus suscipit quidem</p>
                 </div>
-                <div class="flex  w-full bg-white rounded-3xl">
-                    <div class="w-[70%] flex items-center p-7">
+                <!---->
+                <!---->
+                <div class="flex w-full bg-white rounded-3xl ticket-div-main">
+                    <div class="w-[65%] sm:w-[70%] flex items-center p-7 ticket-div1">
                         <div class="w-full">
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center">
+                            <div class="flex items-center justify-between mb-5 total-seat">
+                                <div class="flex flex-wrap justify-center items-center">
                                     <img src="images/bus-logo.png">
                                     <div class="ml-4">
                                         <h1 class="font-bold text-2xl text-black">Greenline Paribhan</h1>
                                         <p>Coach-009-WEB | AC_Business</p>
                                     </div>
                                 </div>
-                                <button class="flex items-center seats"><img class="mr-2" src="images/seat-green-filled.png"><span id="total-seats" class="mr-1">40</span>Seates Left</button>
+                                <div class="flex justify-center">
+                                    <button class="flex items-center seats"><img class="mr-2" src="images/seat-green-filled.png"><span id="total-seats" class="mr-1">40</span>Seates Left</button>
+                                </div>
                             </div>
-                            <div class="w-full bg-[#F7F8F8] mt-5 p-5 rounded-lg">
+                            <div class="w-full bg-[#F7F8F8] p-5 rounded-lg">
                                 <div class="flex justify-between pb-2 border-bottom">
                                     <p>Route</p>
                                     <p>Dhaka - Sylhet</p>
@@ -132,7 +137,7 @@
                                     <p>Depature Time</p>
                                     <p>9:00 PM</p>
                                 </div>
-                                <div class="flex justify-between mt-5 three-btn">
+                                <div class="flex flex-wrap justify-between mt-5 gap-2 three-btn">
                                     <button>Boarding Point - Laxmipur</button>
                                     <button>Dropping Point - Bogura</button>
                                     <button>Est, Time - 11 Hour</button>
@@ -140,17 +145,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex items-center  w-[30%]">
-                        <img class="lg:h-[325px]" src="images/info-devider.png"> 
+                    <div class="devider hidden lg:block">
+                        <img class="h-full lg:min-h-[325px]" src="images/info-devider.png"> 
+                    </div>
+                    <div class="flex items-center w-[35%] sm:w-[30%] pr-7 pb-7 pl-7 ticket-div2">
                         <div class="w-full text-center">
-                            <h1 class="text-3xl text-black font-extrabold">NEW15</h1>
-                            <p class="text-base">Cupon Code</p>
+                            <h1 class="text-3xl text-black font-extrabold">550 Taka</h1>
+                            <p class="text-2xl font-semibold">Per Seat</p>
                         </div>
                     </div>
                 </div>
+                <!---->
 
-                <div class="flex  w-full bg-white rounded-3xl p-7 mt-6">
-                    <div class="w-[53%]">
+                <!---->
+                <div class="flex flex-wrap w-full bg-white rounded-3xl p-7 mt-6">
+                    <div class="w-full md:w-[53%]">
                         <div class="border-bottom pb-2"><h1 class="text-xl text-black font-semibold">Select Your Seat</h1></div>
                         <div class="border-bottom pb-2 mt-4 flex justify-between">
                             <div class="flex items-center"><img src="images/seat-gray.png"><p class="ml-2">Avaiable</p></div>
@@ -161,71 +170,70 @@
                         </div>
                         <div>
                             <div class="flex justify-between items-center mt-5">
-                                <span class="px-6">A</span>
-        
-                                <button  class="steering">A1</button>
-                                <button  class="steering">A2</button>
-                                <button  class="steering">A3</button>
-                                <button  class="steering">A4</button>
+                                <span class="pr-3">A</span>
+                                <button class="steering">A1</button>
+                                <button class="steering">A2</button>
+                                <button class="steering">A3</button>
+                                <button class="steering">A4</button>
                             </div>
                             <div class="flex justify-between items-center mt-5">
-                                <span class="px-6">B</span>
+                                <span class="pr-3">B</span>
                                 <button class="steering">B1</button>
                                 <button class="steering">B2</button>
                                 <button class="steering">B3</button>
                                 <button class="steering">B4</button>
                             </div>
                             <div class="flex justify-between items-center mt-5">
-                                <span class="px-6">C</span>
+                                <span class="pr-3">C</span>
                                 <button class="steering">C1</button>
                                 <button class="steering">C2</button>
                                 <button class="steering">C3</button>
                                 <button class="steering">C4</button>
                             </div>
                             <div class="flex justify-between items-center mt-5">
-                                <span class="px-6">D</span>
+                                <span class="pr-3">D</span>
                                 <button class="steering">D1</button>
                                 <button class="steering">D2</button>
                                 <button class="steering">D3</button>
                                 <button class="steering">D4</button>
                             </div>
                             <div class="flex justify-between items-center mt-5">
-                                <span class="px-6">E</span>
+                                <span class="pr-3">E</span>
                                 <button class="steering">E1</button>
                                 <button class="steering">E2</button>
                                 <button class="steering">E3</button>
                                 <button class="steering">E4</button>
                             </div>
                             <div class="flex justify-between items-center mt-5">
-                                <span class="px-6">F</span>
+                                <span class="pr-3">F</span>
                                 <button class="steering">F1</button>
                                 <button class="steering">F2</button>
                                 <button class="steering">F3</button>
                                 <button class="steering">F4</button>
                             </div>
                             <div class="flex justify-between items-center mt-5">
-                                <span class="px-6">G</span>
+                                <span class="pr-3">G</span>
                                 <button class="steering">G1</button>
                                 <button class="steering">G2</button>
                                 <button class="steering">G3</button>
                                 <button class="steering">G4</button>
                             </div>
                             <div class="flex justify-between items-center mt-5">
-                                <span class="px-6">H</span>
+                                <span class="pr-3">H</span>
                                 <button class="steering">H1</button>
                                 <button class="steering">H2</button>
                                 <button class="steering">H3</button>
                                 <button class="steering">H4</button>
                             </div>
                             <div class="flex justify-between items-center mt-5">
-                                <span class="px-6">I</span>
+                                <span class="pr-3">I</span>
                                 <button class="steering">I 1</button>
                                 <button class="steering">I 2</button>
                                 <button class="steering">I 3</button>
                                 <button class="steering">I 4</button>
                             </div>
                             <div class="flex justify-between items-center mt-5">
-                                <span class="px-6">J</span>
+                                <span class="pr-3">J</span>
                                 <button class="steering">J1</button>
                                 <button class="steering">J2</button>
                                 <button class="steering">J3</button>
@@ -233,12 +241,8 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="w-[4%]">
-
-                    </div>
-
-                    <div class="w-[43%]">
+                    <div class="hidden md:block w-[4%]"></div>
+                    <div class="w-full md:w-[43%] mt-7 md:mt-0">
                         <div class="border-bottom pb-2"><h1 class="text-xl text-black font-semibold">Select Your Seat</h1></div>
                         <div class="bg-[#F7F8F8] px-5 pt-5 pb-5 rounded-lg mt-5 mb-5">
                             <div class="flex items-center justify-between mb-3 pb-2 border-bottom">
@@ -247,17 +251,15 @@
                                 <p class="text-black font-semibold">Price</p>
                             </div>
                             <div class="items-center justify-between seat-div"></div>
-                            <div class="flex items-center justify-between mt-2">
+                            <div class="flex items-center justify-between mt-2 mb-1">
                                 <p class="text-black font-semibold">Total Price</p>
                                 <p class="text-black font-semibold">BDT <span id="per-Ticket-price">00</span></p>
                             </div>
-                            <div>
-                                <div id="cupon-div">
-                                    <input type="text" id="cupon" placeholder="Have Any Cupon" class="w-full">
-                                    <button class="w-full bg-[#1DD100B3] text-white rounded-lg py-3 font-bold text-base h-[55px] mt-4" type="submit" id="cupon-btn" disabled>Apply</button>
-                                </div>
+                            <div id="cupon-div">
+                                <input type="text" id="cupon" placeholder="Have Any Cupon" class="w-full">
+                                <button class="w-full bg-[#1DD100B3] text-white rounded-lg py-3 font-bold text-base h-[55px] mt-4" type="submit" id="cupon-btn" disabled>Apply</button>
                             </div>
-                            <div class="flex items-center justify-between mt-3">
+                            <div class="flex items-center justify-between mt-4">
                                 <p class="text-black font-semibold">Grand Total</p>
                                 <p class="text-black font-semibold">BDT <span id="grand-total">00</span></p>
                             </div>
@@ -277,10 +279,13 @@
                                     <input type="email" id="emailInput" placeholder="Enter Your email id" class="w-full">
                                 </div>
                                 <button class="w-full bg-[#1DD100B3] text-white rounded-lg py-3 font-bold text-lg h-[55px]" type="submit" id="submitButton" disabled>Next</button>
-                              </form>
+                            </form>
                         </div>
                     </div>
                 </div>
+                <!---->
+
+
             </div>
         </section>
 
