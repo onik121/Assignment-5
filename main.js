@@ -8,6 +8,7 @@ for (let seat of seats) {
     seat.addEventListener('click', function (){
 
         clickedCount += 1;
+        
         if(clickedCount>=4) {
             for (let seat of seats) {
                 seat.disabled = true;
@@ -57,14 +58,14 @@ for (let seat of seats) {
         div.classList.add('jahid')
         let heading = document.createElement('p');
         heading.innerText = text;
-        let para = document.createElement('p');
-        para.innerHTML = 'Economoy';
-        let para2 = document.createElement('p');
-        para2.innerHTML = 550;
+        let paragraph = document.createElement('p');
+        paragraph.innerHTML = 'Economoy';
+        let paragraph2 = document.createElement('p');
+        paragraph2.innerHTML = 550;
         mainDiv.appendChild(div);
         div.appendChild(heading);
-        div.appendChild(para);
-        div.appendChild(para2);
+        div.appendChild(paragraph);
+        div.appendChild(paragraph2);
 
 
         // 
@@ -97,14 +98,6 @@ for (let seat of seats) {
         let seatCountNew = scoreUpdate + 1;
         seatCount.innerText = seatCountNew;
 
-
-        //
-        let contentHides = document.getElementsByClassName('content-hide');
-        for (let contentHide of contentHides) {
-            // console.log(contentHide)
-        }
-
-
         // 
         let submitButton = document.getElementById('submitButton');
         if (clickedCount>=1) {
@@ -114,8 +107,6 @@ for (let seat of seats) {
 
     });
 };
-
-
 
 
 let numberInput = document.getElementById('phoneInput');
