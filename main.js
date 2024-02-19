@@ -38,6 +38,10 @@ for (let seat of seats) {
                     let finalPrice = grandTicketPriceNumber - discountPrice;
                     grandTicketPrice.innerHTML = finalPrice;
                 }
+                
+                else if(cuponText=='') {
+                    alert('Please Enter Your Cupon')
+                }
             
                 else{
                     alert('Wrong Cupon Code')
