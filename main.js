@@ -24,20 +24,32 @@ for (let seat of seats) {
                 let grandTicketPrice = document.getElementById('grand-total');
                 let grandTicketPriceText = grandTicketPrice.innerHTML;
                 let grandTicketPriceNumber = parseInt(grandTicketPriceText);
+                let amount = document.getElementById('bdt');
+                let discountText = document.getElementById('discount-text');
+                amount.innerText = 'BDT';
+                discountText.innerText = 'Discount';
                 if(cuponOne === cuponText) {
                     let cuponDiv = document.getElementById('cupon-div');
+                    let discountAmount = document.getElementById('discount-amount');
                     cuponDiv.classList.add('hidden')
                     let discountPrice = grandTicketPriceNumber*15/100;
                     let finalPrice = grandTicketPriceNumber - discountPrice;
-                    grandTicketPrice.innerHTML = finalPrice;
+                    grandTicketPrice.innerText = finalPrice;
+                    discountAmount.innerText = discountPrice;
+                    // amount.innerText = 'BDT';
+                    // discountText.innerText = 'Discount';
                 }
 
                 else if(cuponText===cuponTwo) {
                     let cuponDiv = document.getElementById('cupon-div');
+                    let discountAmount = document.getElementById('discount-amount');
                     cuponDiv.classList.add('hidden')
                     let discountPrice = grandTicketPriceNumber*20/100;
                     let finalPrice = grandTicketPriceNumber - discountPrice;
-                    grandTicketPrice.innerHTML = finalPrice;
+                    grandTicketPrice.innerText = finalPrice;
+                    discountAmount.innerText = discountPrice;
+                    // amount.innerText = 'BDT';
+                    // discountText.innerText = 'Discount';
                 }
 
                 else if(cuponText=='') {
