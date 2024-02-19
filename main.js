@@ -38,7 +38,7 @@ for (let seat of seats) {
                     let finalPrice = grandTicketPriceNumber - discountPrice;
                     grandTicketPrice.innerHTML = finalPrice;
                 }
-                
+
                 else if(cuponText=='') {
                     alert('Please Enter Your Cupon')
                 }
@@ -112,27 +112,6 @@ for (let seat of seats) {
             submitButton.removeAttribute('disabled');
         }
 
-    
-        // let numberInput = document.getElementById('phoneInput');
-        // let Button = document.getElementById('submitButton');
-        // Button.addEventListener('click', function() {
-        //     let inputValue = numberInput.value;
-        //     let numberValue = parseFloat(inputValue);
-
-        //     if (!isNaN(numberValue)) {
-        //         let contentHides = document.getElementsByClassName('content-hide');
-        //         let contentshow = document.getElementById('content-show');
-        //         for (let contentHide of contentHides) {
-        //             contentHide.classList.add('hidden')
-        //             contentshow.classList.remove('hidden');
-        //         }
-        //     }
-        //     else {
-        //         alert('Please Enter Your Number')
-        //     }
-        // });
-
-
     });
 };
 
@@ -156,4 +135,10 @@ Button.addEventListener('click', function() {
     else {
         alert('Please Enter Your Number')
     }
+});
+
+
+let Continue = document.getElementById('continue');
+Continue.addEventListener('click', function() {
+    window.location.reload();
 });

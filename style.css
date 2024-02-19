@@ -116,6 +116,8 @@ form input::placeholder{
     margin: 10px 0px;
 }
 
+
+
 @media screen and (max-width: 900px){
 
     .total-seat {
@@ -149,10 +151,6 @@ form input::placeholder{
         font-size: 16px;
     }
 
-
-
-
-
     .cupon-text h1{
         font-size: 25px;
     }
@@ -165,9 +163,6 @@ form input::placeholder{
     .cupon-div2{
         width: 55% !important;
     }
-
-
-
 
     .ticket-div-main{
         flex-wrap: wrap !important;
