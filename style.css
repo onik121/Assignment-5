@@ -6,6 +6,10 @@
 }
 
 
+html{
+    scroll-behavior: smooth;
+}
+
 .hero {
     min-height: 550px;
     background: url(images/banner.png);
@@ -85,7 +89,7 @@
     color: white;
 }
 
-form input{
+#myForm input{
     border: 1px solid #0307121A;
     outline: none;
     border-radius: 8px;
@@ -183,5 +187,9 @@ form input::placeholder{
 
     .three-btn button{
         width: 100%;
+    }
+
+    .padding{
+        padding: 18px !important;
     }
 }

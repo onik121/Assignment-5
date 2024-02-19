@@ -6,44 +6,45 @@ let clickedCount = 0;
 
 for (let seat of seats) {
     seat.addEventListener('click', function (){
-        
+
         clickedCount += 1;
         if(clickedCount>=4) {
             for (let seat of seats) {
                 seat.disabled = true;
             }
             let cuponBtn= document.getElementById('cupon-btn')
-            document.getElementById('cupon').addEventListener('keyup', function(onik) {
-                let text =onik.target.value;
+            cuponBtn.disabled = false;
+            cuponBtn.style.backgroundColor = '#1DD100';
+            cuponBtn.addEventListener('click', function() {
+                let cupon = document.getElementById('cupon');
+                let cuponText = cupon.value;
                 let cuponOne = "NEW15";
                 let cuponTwo = "Cupole 20"
                 let grandTicketPrice = document.getElementById('grand-total');
                 let grandTicketPriceText = grandTicketPrice.innerHTML;
                 let grandTicketPriceNumber = parseInt(grandTicketPriceText);
-                if(text===cuponOne) {
-                    cuponBtn.addEventListener('click', function(){
-                        let cuponDiv = document.getElementById('cupon-div');
-                        cuponDiv.classList.add('hidden')
-                        let discountPrice = grandTicketPriceNumber*15/100;
-                        let finalPrice = grandTicketPriceNumber - discountPrice;
-                        grandTicketPrice.innerHTML = finalPrice;
-                    })
-                    cuponBtn.disabled = false;
-                    cuponBtn.style.backgroundColor = '#1DD100';
+                if(cuponOne === cuponText) {
+                    let cuponDiv = document.getElementById('cupon-div');
+                    cuponDiv.classList.add('hidden')
+                    let discountPrice = grandTicketPriceNumber*15/100;
+                    let finalPrice = grandTicketPriceNumber - discountPrice;
+                    grandTicketPrice.innerHTML = finalPrice;
                 }
-                else if(text===cuponTwo) {
-                    cuponBtn.addEventListener('click', function(){
-                        let cuponDiv = document.getElementById('cupon-div');
-                        cuponDiv.classList.add('hidden')
-                        let discountPrice = grandTicketPriceNumber*20/100;
-                        let finalPrice = grandTicketPriceNumber - discountPrice;
-                        grandTicketPrice.innerHTML = finalPrice;
-                    })
-                    cuponBtn.disabled = false;
-                    cuponBtn.style.backgroundColor = '#1DD100';
+
+                else if(cuponText===cuponTwo) {
+                    let cuponDiv = document.getElementById('cupon-div');
+                    cuponDiv.classList.add('hidden')
+                    let discountPrice = grandTicketPriceNumber*20/100;
+                    let finalPrice = grandTicketPriceNumber - discountPrice;
+                    grandTicketPrice.innerHTML = finalPrice;
+                }
+            
+                else{
+                    alert('Wrong Cupon Code')
                 }
             });
         }
+
 
         // 
         let text = seat.innerHTML;
@@ -92,21 +93,63 @@ for (let seat of seats) {
         let seatCountNew = scoreUpdate + 1;
         seatCount.innerText = seatCountNew;
 
+
+        //
+        let contentHides = document.getElementsByClassName('content-hide');
+        for (let contentHide of contentHides) {
+            // console.log(contentHide)
+        }
+
+
         // 
-        var phoneInput = document.getElementById('phoneInput');
-        var submitButton = document.getElementById('submitButton');
-        phoneInput.addEventListener('input', function () {
-            if (phoneInput.value.trim().length > 0 && !isNaN(phoneInput.value)) {
-                submitButton.removeAttribute('disabled');
-                submitButton.style.backgroundColor = '#1DD100';
-            } 
-            else {
-                submitButton.setAttribute('disabled', 'disabled');
-            }
-        });
-    })
+        let submitButton = document.getElementById('submitButton');
+        if (clickedCount>=1) {
+            submitButton.style.backgroundColor = '#1DD100';
+            submitButton.removeAttribute('disabled');
+        }
+
+    
+        // let numberInput = document.getElementById('phoneInput');
+        // let Button = document.getElementById('submitButton');
+        // Button.addEventListener('click', function() {
+        //     let inputValue = numberInput.value;
+        //     let numberValue = parseFloat(inputValue);
+
+        //     if (!isNaN(numberValue)) {
+        //         let contentHides = document.getElementsByClassName('content-hide');
+        //         let contentshow = document.getElementById('content-show');
+        //         for (let contentHide of contentHides) {
+        //             contentHide.classList.add('hidden')
+        //             contentshow.classList.remove('hidden');
+        //         }
+        //     }
+        //     else {
+        //         alert('Please Enter Your Number')
+        //     }
+        // });
+
+
+    });
 };
 
 
 
 
+let numberInput = document.getElementById('phoneInput');
+let Button = document.getElementById('submitButton');
+Button.addEventListener('click', function() {
+    let inputValue = numberInput.value;
+    let numberValue = parseFloat(inputValue);
+
+    if (!isNaN(numberValue)) {
+        let contentHides = document.getElementsByClassName('content-hide');
+        let contentshow = document.getElementById('content-show');
+        for (let contentHide of contentHides) {
+            contentHide.classList.add('hidden')
+            contentshow.classList.remove('hidden');
+        }
+    }
+    else {
+        alert('Please Enter Your Number')
+    }
+});
